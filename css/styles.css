@@ -1,4 +1,11 @@
-
+@media only screen and (max-width: 768px) {
+ #searchInput {
+    margin:0 auto;
+  }
+ li{
+	 font-size:0.8em;
+ }
+}
 /* needs important? */
 body{
 	background-color:#453EA5 !important;

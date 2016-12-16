@@ -13,16 +13,24 @@ $(document).ready(function(){
 			success : function(data){
 				//reset
 				$("#output").html('');
+				$("#searchInput").text('');
 				
 				for (i=0; i < data[1].length; i++){
 				$("#output").append("<li><a target='blank' href="+data[3][i]+">"+data[1][i]+"</a><br>"+"	"+data[2][i]+"<br></li>");
 				}
 			},
 			error : function(errorMsg){
-				alert("nope");
+				alert("Cannot connect to server error 403");
 			}					
 		});	
+		
+		// 'No results' doesn't work
+		// if ($('#output') == ""){
+			 // $('#output').text('<li>Your search turned up nothing</li>')
+		// }
+		$("html, body").animate({ scrollTop: "550px" },1000);
 		e.preventDefault();
+		
 	});
 	$("#searchInput").keypress(function(e){
 				if(e.which == 13){
